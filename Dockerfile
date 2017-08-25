@@ -31,3 +31,5 @@ RUN cd /tmp && \
     chmod 755 /usr/local/bin/redis-cli  && \
     chmod 755 /usr/local/bin/redis-server && \
     make clean
+
+RUN apt-get update && apt-get -o Dpkg::Options::="--force-confmiss" install -y --reinstall netbase
