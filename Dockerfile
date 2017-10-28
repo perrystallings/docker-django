@@ -19,6 +19,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libpq-dev \
     wget \
     sudo && \
+    apt-get -o Dpkg::Options::="--force-confmiss" install -y --reinstall netbase && \
     rm -rf /var/lib/apt/lists/*
 
 RUN cd /tmp && \
